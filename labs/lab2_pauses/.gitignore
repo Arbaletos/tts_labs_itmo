@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.npy
+*.tar
+*.pt
+
+# Экспериментальные модели (не нужны для ЛР2)
+crf_model.pkl
+crf_reg.pkl
+ensemble_clf1.pkl
+ensemble_clf2.pkl
+ensemble_clf3.pkl
+ensemble_meta.pkl
+ensemble_reg.pkl
+ensemble_scaler.pkl
+rnn_word_to_idx.pkl
+rubert_base_meta.pkl
+rubert_ft_meta.pkl
+scaler.pkl
