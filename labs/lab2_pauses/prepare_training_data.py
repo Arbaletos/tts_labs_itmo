@@ -11,6 +11,7 @@ Run from the lab directory::
 
     python prepare_training_data.py
 """
+from __future__ import annotations
 import csv
 import glob
 import numpy as np
@@ -19,9 +20,11 @@ import pandas as pd
 from praatio import textgrid
 import tqdm
 
-RUSLAN_META = '../../data/metadata_RUSLAN_22200_normalized.csv'
-ALIGN_DIR = '../../data/RUSLAN_align_v2/'
-RESULT_PATH = 'data/RUSLAN_pause_metadata.csv'
+
+
+RUSLAN_META = r'D:\TTS_ITMO\tts_labs_itmo\labs\lab1_text\data\metadata_RUSLAN_22200_normalized.csv'
+ALIGN_DIR = r'D:\TTS_ITMO\tts_labs_itmo\data\RUSLAN_22050_align_v2'
+RESULT_PATH = r'D:\TTS_ITMO\tts_labs_itmo\data\RUSLAN_pause_metadata.csv'
 
 def read_text_grids(ruslan: pd.DataFrame, align_root: str) -> tuple[pd.DataFrame, pd.DataFrame, list[str]]:   
     """Read the MFA TextGrid of every utterance in `ruslan`.
@@ -77,6 +80,7 @@ def align_text_and_textgrid(tokens: pd.DataFrame, text: str) -> pd.DataFrame:
         `tokens` with a `label_raw` column, or `tokens` unchanged if a word is not
         found in `text` — such utterances are dropped later.
     """
+    tokens = tokens.copy()
     raw_tokens = []
     text_lower = text.lower()
     previous_word = -1
@@ -114,28 +118,43 @@ def add_pause_labels(align: pd.DataFrame) -> pd.DataFrame:
     Returns:
         `align` with the three label columns.
     """
-    is_last_word = []
-    pause_after = []
-    pause_duration = []
+def add_pause_labels(align: pd.DataFrame) -> pd.DataFrame:
+    """Mark which words are followed by a pause, and for how long.
+
+    Adds `is_last_word`, `is_pause_after` and `pause_duration` (seconds). Silence rows
+    themselves get ``False`` / ``0.0``; silence before the first word is ignored.
+
+    Args:
+        align: Word intervals of one utterance, in order.
+
+    Returns:
+        `align` with the three label columns.
+    """
+    align = align.copy()  # ← убирает SettingWithCopyWarning
+    
+    n = len(align)
+    is_last_word = [False] * n
+    pause_after = [False] * n
+    pause_duration = [0.0] * n
+    
     last_word = -1
     for idx, (label, dur) in enumerate(align[['label', 'duration']].values):
         if label == '':
-            if last_word>=0:
+            # Пауза: приклеиваем к предыдущему слову
+            if last_word >= 0:
                 pause_after[last_word] = True
                 pause_duration[last_word] = dur
-            pause_after.append(False)
-            pause_duration.append(0.)
-            is_last_word.append(False)
         else:
-            pause_after.append(False)
-            pause_duration.append(0.)
-            is_last_word.append(False)
+            # Слово: запоминаем его индекс
             last_word = idx
-    if last_word>=0:
+    
+    # Последнее слово в предложении
+    if last_word >= 0:
         is_last_word[last_word] = True
+    
     align['is_last_word'] = is_last_word
     align['is_pause_after'] = pause_after
-    align['pause_duration'] = pause_duration 
+    align['pause_duration'] = pause_duration
     return align
     
 
