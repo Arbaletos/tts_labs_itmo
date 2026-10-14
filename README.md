@@ -74,7 +74,7 @@ python -c "import torch; print(torch.__version__, torch.cuda.is_available(), tor
 **Установка репозитория coqui-TTS**
 Необходимо установить не основной репозиторий, а данный форк, который содержит необходимые модификации для работы с моделями синтеза речи в рамках курса. Либо можно их имплементировать самостоятельно!
 ```bash
-pip install "TTS @ git+https://github.com/Arbaletos/coqui-ai-TTS.git@tts-course-itmo-2026-m1"
+pip install "git+https://github.com/Arbaletos/coqui-ai-TTS.git@tts-course-itmo-2026-m1"
 ```
 
 **Дополнительные зависимости**
