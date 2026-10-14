@@ -1,10 +1,8 @@
-# данные
+data/*
 *.wav
 *.npy
 *.pth
 *.TextGrid
-labs/lab1_text/data/metadata_RUSLAN_22200.csv
-labs/lab1_text/preprocess_ruslan_ish.py
 
 # окружение
 .venv/
@@ -17,7 +15,13 @@ __pycache__/
 .idea/
 .vscode/
 .DS_Store
-
-# модели
-*.joblib
-*.pkl
+# lab3: временные и бэкап-файлы
+labs/lab3_g2p/~$*.docx
+labs/lab3_g2p/~WRL*.tmp
+labs/lab3_g2p/g2p_backup_*.py
+labs/lab3_g2p/.ipynb_checkpoints/
+helper.txt
+labs/helper.txt
+labs/lab1_text/preprocess_ruslan_ish.py
+model.joblib
+labs/lab3_g2p/data/russian_mfa.dict.zip
