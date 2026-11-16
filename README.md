@@ -108,3 +108,6 @@ data/             (в .gitignore) сюда качается корпус и пр
 - Coqui-TTS -- Легендарная библиотека синтеза речи([link](github.com/idiap/coqui-ai-TTS))
 - King S. Speech synthesis, University of Edinburgh / speech.zone ([link](https://speech.zone/courses/speech-synthesis/)).
 - Borovik I. Speech synthesis and voice cloning course, Skoltech ISP’25 ([link](https://github.com/ilya16/speech-synthesis-course)).
+- Курс по нейросетевой обработке речи от Yandex Data School ([link](https://github.com/yandexdataschool/speech_course)).
+- Гайд по запуску тракта синтеза от PyTorch ([link](https://docs.pytorch.org/audio/stable/tutorials/tacotron2_pipeline_tutorial.html)).
+
