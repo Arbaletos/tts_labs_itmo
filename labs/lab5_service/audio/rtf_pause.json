@@ -1,0 +1,62 @@
+[
+  {
+    "id": "eval_10_1",
+    "audio_s": 1.718,
+    "total_s": 0.408,
+    "rtf": 0.237,
+    "stages": {
+      "markup": 0.0,
+      "normalize": 0.0001,
+      "tokenize": 0.0,
+      "pauses": 0.0061,
+      "g2p": 0.0002,
+      "acoustic": 0.2978,
+      "vocoder": 0.1039
+    }
+  },
+  {
+    "id": "eval_10_2",
+    "audio_s": 1.985,
+    "total_s": 0.068,
+    "rtf": 0.034,
+    "stages": {
+      "markup": 0.0,
+      "normalize": 0.0,
+      "tokenize": 0.0,
+      "pauses": 0.0018,
+      "g2p": 0.0001,
+      "acoustic": 0.0132,
+      "vocoder": 0.0532
+    }
+  },
+  {
+    "id": "eval_10_3",
+    "audio_s": 1.718,
+    "total_s": 0.06,
+    "rtf": 0.035,
+    "stages": {
+      "markup": 0.0001,
+      "normalize": 0.0,
+      "tokenize": 0.0,
+      "pauses": 0.0018,
+      "g2p": 0.0001,
+      "acoustic": 0.0137,
+      "vocoder": 0.0438
+    }
+  },
+  {
+    "id": "eval_10_4",
+    "audio_s": 1.985,
+    "total_s": 0.063,
+    "rtf": 0.032,
+    "stages": {
+      "markup": 0.0,
+      "normalize": 0.0,
+      "tokenize": 0.0,
+      "pauses": 0.0017,
+      "g2p": 0.0001,
+      "acoustic": 0.0122,
+      "vocoder": 0.0485
+    }
+  }
+]

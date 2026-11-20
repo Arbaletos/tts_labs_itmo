@@ -25,3 +25,6 @@ labs/helper.txt
 labs/lab1_text/preprocess_ruslan_ish.py
 model.joblib
 labs/lab3_g2p/data/russian_mfa.dict.zip
+labs/lab5_service/pretrained_models/
+labs/lab5_service/__pycache__/
+labs/lab4_acoustic/runs/

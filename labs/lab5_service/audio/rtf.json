@@ -1,0 +1,142 @@
+[
+  {
+    "id": "eval_01",
+    "audio_s": 4.516,
+    "total_s": 0.353,
+    "rtf": 0.078,
+    "stages": {
+      "normalize": 0.0001,
+      "tokenize": 0.0,
+      "pauses": 0.0066,
+      "g2p": 0.0002,
+      "acoustic": 0.1762,
+      "vocoder": 0.1695
+    }
+  },
+  {
+    "id": "eval_02",
+    "audio_s": 2.543,
+    "total_s": 0.081,
+    "rtf": 0.032,
+    "stages": {
+      "normalize": 0.0,
+      "tokenize": 0.0,
+      "pauses": 0.0018,
+      "g2p": 0.0001,
+      "acoustic": 0.0161,
+      "vocoder": 0.0633
+    }
+  },
+  {
+    "id": "eval_03",
+    "audio_s": 8.719,
+    "total_s": 0.209,
+    "rtf": 0.024,
+    "stages": {
+      "normalize": 0.0,
+      "tokenize": 0.0,
+      "pauses": 0.0019,
+      "g2p": 0.0004,
+      "acoustic": 0.0214,
+      "vocoder": 0.1856
+    }
+  },
+  {
+    "id": "eval_04",
+    "audio_s": 3.704,
+    "total_s": 0.103,
+    "rtf": 0.028,
+    "stages": {
+      "normalize": 0.0,
+      "tokenize": 0.0,
+      "pauses": 0.002,
+      "g2p": 0.0002,
+      "acoustic": 0.0174,
+      "vocoder": 0.0832
+    }
+  },
+  {
+    "id": "eval_05",
+    "audio_s": 4.702,
+    "total_s": 0.129,
+    "rtf": 0.027,
+    "stages": {
+      "normalize": 0.0,
+      "tokenize": 0.0,
+      "pauses": 0.0019,
+      "g2p": 0.0002,
+      "acoustic": 0.0178,
+      "vocoder": 0.1089
+    }
+  },
+  {
+    "id": "eval_06",
+    "audio_s": 4.145,
+    "total_s": 0.114,
+    "rtf": 0.027,
+    "stages": {
+      "normalize": 0.0,
+      "tokenize": 0.0,
+      "pauses": 0.002,
+      "g2p": 0.0001,
+      "acoustic": 0.0176,
+      "vocoder": 0.0939
+    }
+  },
+  {
+    "id": "eval_07",
+    "audio_s": 1.997,
+    "total_s": 0.064,
+    "rtf": 0.032,
+    "stages": {
+      "normalize": 0.0,
+      "tokenize": 0.0,
+      "pauses": 0.0021,
+      "g2p": 0.0002,
+      "acoustic": 0.0129,
+      "vocoder": 0.0484
+    }
+  },
+  {
+    "id": "eval_08",
+    "audio_s": 2.09,
+    "total_s": 0.064,
+    "rtf": 0.031,
+    "stages": {
+      "normalize": 0.0,
+      "tokenize": 0.0,
+      "pauses": 0.002,
+      "g2p": 0.0001,
+      "acoustic": 0.0122,
+      "vocoder": 0.0495
+    }
+  },
+  {
+    "id": "eval_09",
+    "audio_s": 81.806,
+    "total_s": 1.914,
+    "rtf": 0.023,
+    "stages": {
+      "normalize": 0.0002,
+      "tokenize": 0.0001,
+      "pauses": 0.0147,
+      "g2p": 0.0023,
+      "acoustic": 0.1532,
+      "vocoder": 1.7437
+    }
+  },
+  {
+    "id": "eval_10",
+    "audio_s": 1.544,
+    "total_s": 0.056,
+    "rtf": 0.036,
+    "stages": {
+      "normalize": 0.0,
+      "tokenize": 0.0,
+      "pauses": 0.002,
+      "g2p": 0.0001,
+      "acoustic": 0.0133,
+      "vocoder": 0.0407
+    }
+  }
+]
