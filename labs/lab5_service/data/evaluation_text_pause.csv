@@ -1,5 +1,6 @@
 id|text
-eval_10_1|Казнить, нельзя помиловать.
-eval_10_2|Казнить нельзя, помиловать.
-eval_10_3|Казнить <pause type="normal"> нельзя, <pause type="none"> помиловать.
-eval_10_4|Казнить, <pause type="none"> нельзя <pause type="normal"> помиловать.
+eval_p_1|Казнить нельзя помиловать.
+eval_p_2|Казнить, нельзя помиловать.
+eval_p_3|Казнить нельзя, помиловать.
+eval_p_4|Казнить <pause type="normal"> нельзя, <pause type="none"> помиловать.
+eval_p_5|Казнить, <pause type="none"> нельзя <pause type="normal"> помиловать.
