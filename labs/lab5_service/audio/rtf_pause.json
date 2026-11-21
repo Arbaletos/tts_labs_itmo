@@ -1,51 +1,36 @@
 [
   {
-    "id": "eval_10_1",
-    "audio_s": 1.718,
-    "total_s": 0.408,
-    "rtf": 0.237,
+    "id": "eval_p_1",
+    "audio_s": 1.544,
+    "total_s": 0.256,
+    "rtf": 0.166,
     "stages": {
       "markup": 0.0,
       "normalize": 0.0001,
       "tokenize": 0.0,
-      "pauses": 0.0061,
-      "g2p": 0.0002,
-      "acoustic": 0.2978,
-      "vocoder": 0.1039
+      "pauses": 0.0063,
+      "g2p": 0.0001,
+      "acoustic": 0.1514,
+      "vocoder": 0.0978
     }
   },
   {
-    "id": "eval_10_2",
-    "audio_s": 1.985,
-    "total_s": 0.068,
-    "rtf": 0.034,
+    "id": "eval_p_2",
+    "audio_s": 1.718,
+    "total_s": 0.062,
+    "rtf": 0.036,
     "stages": {
       "markup": 0.0,
       "normalize": 0.0,
       "tokenize": 0.0,
-      "pauses": 0.0018,
+      "pauses": 0.0017,
       "g2p": 0.0001,
-      "acoustic": 0.0132,
-      "vocoder": 0.0532
+      "acoustic": 0.0134,
+      "vocoder": 0.0467
     }
   },
   {
-    "id": "eval_10_3",
-    "audio_s": 1.718,
-    "total_s": 0.06,
-    "rtf": 0.035,
-    "stages": {
-      "markup": 0.0001,
-      "normalize": 0.0,
-      "tokenize": 0.0,
-      "pauses": 0.0018,
-      "g2p": 0.0001,
-      "acoustic": 0.0137,
-      "vocoder": 0.0438
-    }
-  },
-  {
-    "id": "eval_10_4",
+    "id": "eval_p_3",
     "audio_s": 1.985,
     "total_s": 0.063,
     "rtf": 0.032,
@@ -53,10 +38,40 @@
       "markup": 0.0,
       "normalize": 0.0,
       "tokenize": 0.0,
+      "pauses": 0.002,
+      "g2p": 0.0001,
+      "acoustic": 0.0121,
+      "vocoder": 0.0488
+    }
+  },
+  {
+    "id": "eval_p_4",
+    "audio_s": 1.718,
+    "total_s": 0.058,
+    "rtf": 0.033,
+    "stages": {
+      "markup": 0.0001,
+      "normalize": 0.0,
+      "tokenize": 0.0,
+      "pauses": 0.0016,
+      "g2p": 0.0,
+      "acoustic": 0.0119,
+      "vocoder": 0.0438
+    }
+  },
+  {
+    "id": "eval_p_5",
+    "audio_s": 1.985,
+    "total_s": 0.063,
+    "rtf": 0.031,
+    "stages": {
+      "markup": 0.0,
+      "normalize": 0.0,
+      "tokenize": 0.0,
       "pauses": 0.0017,
       "g2p": 0.0001,
-      "acoustic": 0.0122,
-      "vocoder": 0.0485
+      "acoustic": 0.012,
+      "vocoder": 0.0487
     }
   }
 ]

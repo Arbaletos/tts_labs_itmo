@@ -2,29 +2,29 @@
   {
     "id": "eval_01",
     "audio_s": 4.516,
-    "total_s": 0.353,
-    "rtf": 0.078,
+    "total_s": 0.362,
+    "rtf": 0.08,
     "stages": {
       "normalize": 0.0001,
       "tokenize": 0.0,
-      "pauses": 0.0066,
+      "pauses": 0.0067,
       "g2p": 0.0002,
-      "acoustic": 0.1762,
-      "vocoder": 0.1695
+      "acoustic": 0.1862,
+      "vocoder": 0.1691
     }
   },
   {
     "id": "eval_02",
     "audio_s": 2.543,
-    "total_s": 0.081,
-    "rtf": 0.032,
+    "total_s": 0.084,
+    "rtf": 0.033,
     "stages": {
       "normalize": 0.0,
       "tokenize": 0.0,
-      "pauses": 0.0018,
+      "pauses": 0.0021,
       "g2p": 0.0001,
-      "acoustic": 0.0161,
-      "vocoder": 0.0633
+      "acoustic": 0.0165,
+      "vocoder": 0.0655
     }
   },
   {
@@ -35,10 +35,10 @@
     "stages": {
       "normalize": 0.0,
       "tokenize": 0.0,
-      "pauses": 0.0019,
+      "pauses": 0.002,
       "g2p": 0.0004,
-      "acoustic": 0.0214,
-      "vocoder": 0.1856
+      "acoustic": 0.0216,
+      "vocoder": 0.1846
     }
   },
   {
@@ -49,10 +49,10 @@
     "stages": {
       "normalize": 0.0,
       "tokenize": 0.0,
-      "pauses": 0.002,
+      "pauses": 0.0019,
       "g2p": 0.0002,
-      "acoustic": 0.0174,
-      "vocoder": 0.0832
+      "acoustic": 0.0177,
+      "vocoder": 0.0831
     }
   },
   {
@@ -65,78 +65,78 @@
       "tokenize": 0.0,
       "pauses": 0.0019,
       "g2p": 0.0002,
-      "acoustic": 0.0178,
-      "vocoder": 0.1089
+      "acoustic": 0.0179,
+      "vocoder": 0.1086
     }
   },
   {
     "id": "eval_06",
-    "audio_s": 4.145,
-    "total_s": 0.114,
-    "rtf": 0.027,
+    "audio_s": 4.284,
+    "total_s": 0.113,
+    "rtf": 0.026,
     "stages": {
       "normalize": 0.0,
       "tokenize": 0.0,
       "pauses": 0.002,
       "g2p": 0.0001,
-      "acoustic": 0.0176,
-      "vocoder": 0.0939
+      "acoustic": 0.018,
+      "vocoder": 0.0926
     }
   },
   {
     "id": "eval_07",
     "audio_s": 1.997,
-    "total_s": 0.064,
+    "total_s": 0.063,
     "rtf": 0.032,
     "stages": {
       "normalize": 0.0,
       "tokenize": 0.0,
-      "pauses": 0.0021,
-      "g2p": 0.0002,
-      "acoustic": 0.0129,
+      "pauses": 0.0018,
+      "g2p": 0.0001,
+      "acoustic": 0.0128,
       "vocoder": 0.0484
     }
   },
   {
     "id": "eval_08",
-    "audio_s": 2.09,
-    "total_s": 0.064,
-    "rtf": 0.031,
+    "audio_s": 2.786,
+    "total_s": 0.082,
+    "rtf": 0.029,
     "stages": {
       "normalize": 0.0,
       "tokenize": 0.0,
       "pauses": 0.002,
       "g2p": 0.0001,
-      "acoustic": 0.0122,
-      "vocoder": 0.0495
+      "acoustic": 0.0161,
+      "vocoder": 0.0634
     }
   },
   {
     "id": "eval_09",
     "audio_s": 81.806,
-    "total_s": 1.914,
+    "total_s": 1.916,
     "rtf": 0.023,
     "stages": {
       "normalize": 0.0002,
       "tokenize": 0.0001,
-      "pauses": 0.0147,
-      "g2p": 0.0023,
-      "acoustic": 0.1532,
-      "vocoder": 1.7437
+      "pauses": 0.0149,
+      "g2p": 0.0022,
+      "acoustic": 0.154,
+      "vocoder": 1.745
     }
   },
   {
     "id": "eval_10",
-    "audio_s": 1.544,
-    "total_s": 0.056,
-    "rtf": 0.036,
+    "audio_s": 9.067,
+    "total_s": 0.228,
+    "rtf": 0.025,
     "stages": {
-      "normalize": 0.0,
+      "normalize": 0.0001,
       "tokenize": 0.0,
-      "pauses": 0.002,
-      "g2p": 0.0001,
-      "acoustic": 0.0133,
-      "vocoder": 0.0407
+      "pauses": 0.0019,
+      "g2p": 0.0004,
+      "acoustic": 0.0229,
+      "vocoder": 0.2027
     }
   }
 ]
