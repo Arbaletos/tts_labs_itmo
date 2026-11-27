@@ -6,6 +6,7 @@ import sys
 
 import torch
 from speechbrain.inference.vocoders import HIFIGAN
+from speechbrain.utils.fetching import LocalStrategy
 
 from TTS.config.shared_configs import BaseAudioConfig
 from TTS.utils.audio import AudioProcessor
@@ -32,7 +33,10 @@ mel = ap.melspectrogram(wav)
 print(f"mel {mel.shape}, range [{mel.min():.2f}, {mel.max():.2f}]")
 
 hifi_gan = HIFIGAN.from_hparams(source="speechbrain/tts-hifigan-libritts-22050Hz",
-                                savedir="pretrained_models/hifigan")
+                                savedir="pretrained_models/hifigan",
+                                # the default strategy symlinks from the HF cache, which Windows
+                                # refuses without admin rights / developer mode (WinError 1314)
+                                local_strategy=LocalStrategy.COPY)
 with torch.no_grad():
     vocoded = hifi_gan.decode_batch(torch.tensor(mel)).squeeze().cpu().numpy()
 
