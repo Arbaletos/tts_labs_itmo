@@ -21,3 +21,8 @@ __pycache__/
 
 # lab 4: run directories (checkpoints, logs, synthesized audio)
 labs/lab4_acoustic/runs/
+
+# lab 5: downloaded vocoder weights; the synthesized audio/ is a graded artifact
+labs/lab5_service/pretrained_models/
+labs/lab5_service/runs/
+!labs/lab5_service/audio/**/*.wav
