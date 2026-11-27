@@ -204,10 +204,19 @@ def ordinal_genitive(n: int) -> str:
     """
     if n <= 0:
         return str(n)
+    # Thousands are read as a plain cardinal ("тысяча девятьсот девяносто пятого").
+    # Before lab 5 this indexed _ORD_HUNDREDS_GEN with n // 100 and crashed with
+    # IndexError on any number >= 1000 ("в 1995-го году").
+    thousands, n = divmod(n, 1000)
+    if n == 0:
+        # "2000-го" -> "двухтысячного" needs a compound ordinal; out of scope, so the
+        # number is read as a cardinal rather than crashing.
+        return cardinal(thousands * 1000)
+    head = cardinal(thousands * 1000) + " " if thousands else ""
     hundreds, rest = divmod(n, 100)
-    prefix = _cardinal_under_1000(hundreds * 100) if hundreds and rest else ""
+    prefix = head + (_cardinal_under_1000(hundreds * 100) if hundreds and rest else "")
     if rest == 0:
-        return _ORD_HUNDREDS_GEN[hundreds]
+        return f"{head}{_ORD_HUNDREDS_GEN[hundreds]}"
     if rest < 10:
         tail = _ORD_ONES_GEN[rest]
     elif rest < 20:
@@ -215,7 +224,22 @@ def ordinal_genitive(n: int) -> str:
     else:
         tens, ones = divmod(rest, 10)
         tail = _ORD_TENS_GEN[tens] if ones == 0 else f"{_TENS[tens]} {_ORD_ONES_GEN[ones]}"
-    return f"{prefix} {tail}".strip()
+    return " ".join(f"{prefix} {tail}".split())
+
+
+def ordinal_plural_genitive(n: int) -> str:
+    """Genitive/prepositional plural ordinal, for decades and centuries: "1800-х".
+
+    Example:
+        >>> ordinal_plural_genitive(1800)
+        'тысяча восьмисотых'
+    """
+    words = ordinal_genitive(n)
+    if words.endswith("ьего"):                     # третьего -> третьих
+        return words[:-3] + "их"
+    if words.endswith("ого"):                      # восьмисотого -> восьмисотых
+        return words[:-3] + "ых"
+    return words                                   # 2000 and the like: plain cardinal
 
 
 class TextNormalizer:
@@ -246,6 +270,7 @@ class TextNormalizer:
         # feature's scope: they are stripped and the bare number is read as a
         # cardinal instead of being silently left dangling.
         self._re_ordinal = re.compile(r"(-?\d+)-(?:го|му)\b")
+        self._re_ordinal_plural = re.compile(r"(\d+)-х\b")      # "в 1800-х годах" (lab 5)
         self._re_ordinal_suffix_strip = re.compile(r"(-?\d+)-(?:[ыои]?[хй]|ое|ая|ые|ых|е|я)\b")
 
         self._re_repeat_bangq = re.compile(r"!{2,}|\?{2,}")
@@ -306,6 +331,7 @@ class TextNormalizer:
 
     def _expand_words(self, text: str) -> str:
         text = self._re_ordinal.sub(lambda m: ordinal_genitive(int(m.group(1))), text)
+        text = self._re_ordinal_plural.sub(lambda m: ordinal_plural_genitive(int(m.group(1))), text)
         text = self._re_ordinal_suffix_strip.sub(r"\1", text)
         text = self._re_number.sub(lambda m: cardinal(int(m.group())), text)
         text = self._re_abbr.sub(lambda m: _ABBREVIATIONS[m.group().lower()], text)
